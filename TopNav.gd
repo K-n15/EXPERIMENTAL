@@ -20,6 +20,7 @@ func _ready():
 	refresh()
 
 func _process(delta):
+	print("clock ", GameState.minutes, " paused=", get_tree().paused, " over=", GameState.mission_over)
 	# Cycle through several events
 	if items.size() > 1:
 		cycle_timer += delta
@@ -30,7 +31,7 @@ func _process(delta):
 	# Clock
 	if GameState.mission_over:
 		return
-		clock_timer += delta
+	clock_timer += delta
 	if clock_timer >= SECONDS_PER_STEP:
 		clock_timer -= SECONDS_PER_STEP
 		GameState.advance_clock(STEP_MINUTES)
