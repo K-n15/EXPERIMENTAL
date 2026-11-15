@@ -5,7 +5,6 @@
 EXPERIMENTAL is a pixel-art strategy game for young learners, made for the **NASA International Space Apps Challenge 2026** challenge *Build a Junior Astronaut Mission Trainer*. The premise: humanity's first long-term lunar outpost is an experiment, and you are its commander. You run a four-person base on Shackleton Connecting Ridge at the Moon's south pole, the site NASA picked for its Moon Base. Every day you assign tasks to your crew, switch life-support systems on and off, and deal with emergencies, while balancing power, oxygen, CO₂, water, food and radiation.
 
 ▶ **Play in your browser:** https://tk-n15.itch.io/experimental
-🎬 **30-second demo:** _[video link]_
 
 ---
 
