@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://8jm8w3213oft"]
+
+[node name="ModuleRow" type="VBoxContainer" unique_id=1568146136]
+offset_right = 638.0
+offset_bottom = 359.0
+
+[node name="Top" type="HBoxContainer" parent="." unique_id=1860988371]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="Top" unique_id=1453609980]
+layout_mode = 2
+
+[node name="Spacer" type="Control" parent="Top" unique_id=1951666790]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Switch" type="CheckButton" parent="Top" unique_id=1585400043]
+layout_mode = 2
+
+[node name="Effects" type="RichTextLabel" parent="." unique_id=1201839491]
+layout_mode = 2
+bbcode_enabled = true
+fit_content = true

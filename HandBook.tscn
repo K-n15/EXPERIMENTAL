@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://tnl235w57g7i"]
+
+[ext_resource type="Script" uid="uid://bp6jc3hyf4wu0" path="res://HandBook.gd" id="1_6qjfw"]
+[ext_resource type="Theme" uid="uid://bco5seujwcsyx" path="res://HandBookTheme.tres" id="1_mgceh"]
+
+[node name="Handbook" type="Control" unique_id=815742061]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 0
+offset_right = 638.0
+offset_bottom = 360.0
+theme = ExtResource("1_mgceh")
+script = ExtResource("1_6qjfw")
+
+[node name="Dim" type="ColorRect" parent="." unique_id=2049200147]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5882353)
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=741495393]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Windows" type="PanelContainer" parent="CenterContainer" unique_id=791393824]
+custom_minimum_size = Vector2(560, 300)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/Windows" unique_id=112778184]
+layout_mode = 2
+
+[node name="Header" type="HBoxContainer" parent="CenterContainer/Windows/VBoxContainer" unique_id=38270433]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="CenterContainer/Windows/VBoxContainer/Header" unique_id=977385103]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 20
+text = "Handbook"
+horizontal_alignment = 1
+
+[node name="Close" type="Button" parent="CenterContainer/Windows/VBoxContainer/Header" unique_id=1830653104]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "Back"
+
+[node name="Tabs" type="TabContainer" parent="CenterContainer/Windows/VBoxContainer" unique_id=1433537298]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3

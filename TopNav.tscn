@@ -1,0 +1,103 @@
+[gd_scene format=3 uid="uid://bq5ugol63hkfu"]
+
+[ext_resource type="Texture2D" uid="uid://b5ti7q0tx12gv" path="res://Detail and Decoration/Setting.png" id="1_1hd2l"]
+[ext_resource type="Script" uid="uid://bkpnia0y8bnh2" path="res://TopNav.gd" id="1_qud0v"]
+[ext_resource type="Texture2D" uid="uid://co56eaaa7xeo3" path="res://Detail and Decoration/SettingPressed.png" id="2_3mqb0"]
+[ext_resource type="Texture2D" uid="uid://du5mptfy5m2ld" path="res://Detail and Decoration/TopNavPanel.png" id="3_0jgxw"]
+[ext_resource type="Texture2D" uid="uid://dn660kolwadbq" path="res://Detail and Decoration/HandBook.png" id="3_iurmx"]
+[ext_resource type="FontFile" uid="uid://cjdk215urq0e2" path="res://Fonts/kenney_kenney-fonts/Fonts/Kenney Mini Square Mono.ttf" id="3_roqq1"]
+[ext_resource type="FontFile" uid="uid://cpgxkgwj4nh7t" path="res://Fonts/kenney_kenney-fonts/Fonts/Kenney Mini Square.ttf" id="4_iurmx"]
+[ext_resource type="Texture2D" uid="uid://dw24e3arrrw67" path="res://Detail and Decoration/HandBookPressed.png" id="9_337sn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_h6cu1"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_y5rhk"]
+texture = ExtResource("3_0jgxw")
+expand_margin_left = 144.0
+expand_margin_right = 144.0
+expand_margin_bottom = 506.0
+
+[node name="TopNav" type="PanelContainer" unique_id=1466633642]
+offset_right = 640.0
+offset_bottom = 358.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_h6cu1")
+script = ExtResource("1_qud0v")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1098468693]
+custom_minimum_size = Vector2(0, 64)
+custom_maximum_size = Vector2(-1, 64)
+layout_mode = 2
+mouse_filter = 2
+alignment = 1
+
+[node name="LeftGroup" type="HBoxContainer" parent="HBoxContainer" unique_id=1228424734]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Menu" type="TextureButton" parent="HBoxContainer/LeftGroup" unique_id=307975199]
+custom_minimum_size = Vector2(64, 64)
+custom_maximum_size = Vector2(64, 64)
+layout_mode = 2
+texture_normal = ExtResource("1_1hd2l")
+texture_pressed = ExtResource("2_3mqb0")
+stretch_mode = 5
+
+[node name="HandBook" type="TextureButton" parent="HBoxContainer/LeftGroup" unique_id=1777240704]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture_normal = ExtResource("3_iurmx")
+texture_pressed = ExtResource("9_337sn")
+stretch_mode = 5
+
+[node name="Banner" type="PanelContainer" parent="HBoxContainer" unique_id=1425344993]
+layout_mode = 2
+size_flags_horizontal = 0
+offset_transform_enabled = true
+theme_override_styles/panel = SubResource("StyleBoxTexture_y5rhk")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/Banner" unique_id=345296599]
+layout_mode = 2
+alignment = 1
+
+[node name="DAY" type="Label" parent="HBoxContainer/Banner/HBoxContainer" unique_id=418702755]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_roqq1")
+text = "DAY"
+
+[node name="DayNum" type="Label" parent="HBoxContainer/Banner/HBoxContainer" unique_id=1429137545]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_iurmx")
+text = "XX"
+
+[node name="Spacer" type="Label" parent="HBoxContainer/Banner/HBoxContainer" unique_id=1625905919]
+layout_mode = 2
+text = "•"
+
+[node name="LTC" type="Label" parent="HBoxContainer/Banner/HBoxContainer" unique_id=1405486731]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_roqq1")
+text = "LTC"
+
+[node name="Clock" type="Label" parent="HBoxContainer/Banner/HBoxContainer" unique_id=1903911659]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_iurmx")
+text = "XX:XX"
+
+[node name="Spacer2" type="Label" parent="HBoxContainer/Banner/HBoxContainer" unique_id=532239064]
+layout_mode = 2
+text = "•"
+
+[node name="Alert" type="Label" parent="HBoxContainer/Banner/HBoxContainer" unique_id=1313641600]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_iurmx")
+text = "Alert"
+
+[node name="RightSpacer" type="MarginContainer" parent="HBoxContainer" unique_id=604933084]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+theme_override_constants/margin_right = 80

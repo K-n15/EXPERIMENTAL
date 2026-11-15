@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://dwm0aei5g4mbc"]
+
+[ext_resource type="FontFile" uid="uid://b4g15r47o7a06" path="res://Fonts/kenney_kenney-fonts/Fonts/Kenney Future Narrow.ttf" id="1_7luu8"]
+[ext_resource type="Script" uid="uid://bmlp4ao3pye2r" path="res://UtilityPanel.gd" id="1_c0xfa"]
+[ext_resource type="FontFile" uid="uid://ypn8utfsg65m" path="res://Fonts/kenney_kenney-fonts/Fonts/Kenney Pixel Square.ttf" id="3_rv6xd"]
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_4ybfi"]
+resource_name = "Expand"
+
+[node name="UtilityPanel" type="PanelContainer" unique_id=700572531]
+offset_right = 639.0
+offset_bottom = 358.0
+script = ExtResource("1_c0xfa")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1895047663]
+layout_mode = 2
+
+[node name="Header" type="HBoxContainer" parent="VBoxContainer" unique_id=770776357]
+layout_mode = 2
+alignment = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/Header" unique_id=437894787]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_7luu8")
+theme_override_font_sizes/font_size = 16
+text = "Utility"
+horizontal_alignment = 2
+
+[node name="Expand" type="Button" parent="VBoxContainer/Header" unique_id=1608331811]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 8
+toggle_mode = true
+action_mode = 0
+button_group = SubResource("ButtonGroup_4ybfi")
+text = "Expand >>"
+autowrap_trim_flags = 192
+icon_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="VBoxContainer" unique_id=63802702]
+layout_mode = 2
+columns = 2
+
+[node name="o2" type="Label" parent="VBoxContainer/GridContainer" unique_id=2052563135]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_rv6xd")
+theme_override_font_sizes/font_size = 12
+text = "O2  "
+
+[node name="o2Level" type="ProgressBar" parent="VBoxContainer/GridContainer" unique_id=1051247935]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+show_percentage = false
+
+[node name="co2" type="Label" parent="VBoxContainer/GridContainer" unique_id=2050806488]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_rv6xd")
+theme_override_font_sizes/font_size = 12
+text = "CO2"
+
+[node name="co2Level" type="ProgressBar" parent="VBoxContainer/GridContainer" unique_id=1730798620]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+show_percentage = false
+
+[node name="h2o" type="Label" parent="VBoxContainer/GridContainer" unique_id=2137415538]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_rv6xd")
+theme_override_font_sizes/font_size = 12
+text = "H2O"
+
+[node name="h2oLevel" type="ProgressBar" parent="VBoxContainer/GridContainer" unique_id=1566893387]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+show_percentage = false

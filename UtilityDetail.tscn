@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://belra2oiqis7n"]
+
+[ext_resource type="Script" uid="uid://b4q3gca6ly588" path="res://UtilityDetail.gd" id="1_xa147"]
+
+[node name="UtilityDetail" type="HBoxContainer" unique_id=314050315]
+offset_right = 639.0
+offset_bottom = 359.0
+script = ExtResource("1_xa147")
+
+[node name="Modules" type="ScrollContainer" parent="." unique_id=364061624]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Lists" type="VBoxContainer" parent="Modules" unique_id=1188071402]
+layout_mode = 2
+
+[node name="Resources" type="VBoxContainer" parent="." unique_id=959268282]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="GridContainer" type="GridContainer" parent="Resources" unique_id=1846782506]
+layout_mode = 2
+columns = 2
+
+[node name="O2" type="Label" parent="Resources/GridContainer" unique_id=1656868990]
+layout_mode = 2
+text = "O2"
+
+[node name="O2Amt" type="ProgressBar" parent="Resources/GridContainer" unique_id=1355900448]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="CO2" type="Label" parent="Resources/GridContainer" unique_id=893485334]
+layout_mode = 2
+text = "CO2"
+
+[node name="CO2Amt" type="ProgressBar" parent="Resources/GridContainer" unique_id=208814799]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="H2O" type="Label" parent="Resources/GridContainer" unique_id=971008451]
+layout_mode = 2
+text = "H2O"
+
+[node name="H2OAmt" type="ProgressBar" parent="Resources/GridContainer" unique_id=871491321]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Food" type="Label" parent="Resources/GridContainer" unique_id=1806708955]
+layout_mode = 2
+text = "Food"
+
+[node name="FoodAmt" type="ProgressBar" parent="Resources/GridContainer" unique_id=1389101951]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Medical" type="Label" parent="Resources/GridContainer" unique_id=1137136628]
+layout_mode = 2
+text = "Medical"
+
+[node name="MedicalAmt" type="ProgressBar" parent="Resources/GridContainer" unique_id=529199482]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3

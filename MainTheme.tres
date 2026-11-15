@@ -1,0 +1,15 @@
+[gd_resource type="Theme" format=3 uid="uid://c548hw8giipm8"]
+
+[ext_resource type="FontFile" uid="uid://cpgxkgwj4nh7t" path="res://Fonts/kenney_kenney-fonts/Fonts/Kenney Mini Square.ttf" id="1_4as0w"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fl208"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.28485027, 0.28485027, 0.28485027, 1)
+
+[resource]
+default_font = ExtResource("1_4as0w")
+default_font_size = 12
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_fl208")

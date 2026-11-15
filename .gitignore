@@ -1,0 +1,9 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+
+# Export builds and temp files
+build/
+*.tmp
+.mono/
+*.kate-swp

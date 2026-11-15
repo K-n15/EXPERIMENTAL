@@ -1,0 +1,238 @@
+[gd_scene format=3 uid="uid://d1ip5fw1i1mmi"]
+
+[ext_resource type="Texture2D" uid="uid://bkklkini0rem2" path="res://CrewPic/Crew1.png" id="1_ecojj"]
+[ext_resource type="Script" uid="uid://cjsxue5k0c8ve" path="res://Crew1.gd" id="1_n61ry"]
+[ext_resource type="FontFile" uid="uid://b4g15r47o7a06" path="res://Fonts/kenney_kenney-fonts/Fonts/Kenney Future Narrow.ttf" id="2_5n7w8"]
+[ext_resource type="FontFile" uid="uid://c6fq8r7b2jwsr" path="res://Fonts/kenney_kenney-fonts/Fonts/Kenney Pixel.ttf" id="3_jll65"]
+[ext_resource type="Texture2D" uid="uid://ww0gwlk3vsl" path="res://CrewPic/Crew3.png" id="4_5n7w8"]
+[ext_resource type="Texture2D" uid="uid://drnuh80h03cgo" path="res://CrewPic/Crew4.png" id="5_3jfhg"]
+[ext_resource type="Script" uid="uid://b87tnnrym038v" path="res://Crew2.gd" id="5_heaym"]
+[ext_resource type="Texture2D" uid="uid://b8lh42r88gouu" path="res://CrewPic/Crew2.png" id="6_mtfud"]
+[ext_resource type="Script" uid="uid://ceeejx6kes30e" path="res://Crew3.gd" id="7_uiswa"]
+[ext_resource type="Script" uid="uid://cfk8uo5fe4ovo" path="res://Crew4.gd" id="9_81451"]
+
+[node name="CrewMember" type="PanelContainer" unique_id=773345164]
+offset_right = 639.0
+offset_bottom = 357.0
+
+[node name="CrewList" type="VBoxContainer" parent="." unique_id=735752469]
+layout_mode = 2
+alignment = 1
+
+[node name="CrewOne" type="HBoxContainer" parent="CrewList" unique_id=75608484]
+layout_mode = 2
+script = ExtResource("1_n61ry")
+
+[node name="Crew1Portrait" type="TextureRect" parent="CrewList/CrewOne" unique_id=272944923]
+custom_minimum_size = Vector2(42, 42)
+layout_mode = 2
+texture = ExtResource("1_ecojj")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Crew1Detail" type="VBoxContainer" parent="CrewList/CrewOne" unique_id=137334090]
+layout_mode = 2
+
+[node name="C1Name" type="Label" parent="CrewList/CrewOne/Crew1Detail" unique_id=1327671860]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_5n7w8")
+theme_override_font_sizes/font_size = 12
+text = "Andre Doughlas"
+
+[node name="C1Stat" type="HBoxContainer" parent="CrewList/CrewOne/Crew1Detail" unique_id=1230762882]
+layout_mode = 2
+
+[node name="C1Task" type="Label" parent="CrewList/CrewOne/Crew1Detail/C1Stat" unique_id=475699172]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_jll65")
+theme_override_font_sizes/font_size = 16
+text = "Task"
+
+[node name="C1AssignedTask" type="OptionButton" parent="CrewList/CrewOne/Crew1Detail/C1Stat" unique_id=13486158]
+custom_minimum_size = Vector2(10, 0)
+custom_maximum_size = Vector2(60, -1)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_jll65")
+theme_override_font_sizes/font_size = 16
+clip_text = true
+
+[node name="C1Stat2" type="HBoxContainer" parent="CrewList/CrewOne/Crew1Detail" unique_id=1125829209]
+layout_mode = 2
+
+[node name="C1Health" type="Label" parent="CrewList/CrewOne/Crew1Detail/C1Stat2" unique_id=310859965]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_jll65")
+theme_override_font_sizes/font_size = 16
+text = "Status"
+
+[node name="C1HealthStat" type="Label" parent="CrewList/CrewOne/Crew1Detail/C1Stat2" unique_id=1188719701]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.7970201, 0.13355443, 1)
+theme_override_fonts/font = ExtResource("3_jll65")
+theme_override_font_sizes/font_size = 16
+text = "Healthy"
+
+[node name="CrewTwo" type="HBoxContainer" parent="CrewList" unique_id=1026421145]
+layout_mode = 2
+script = ExtResource("5_heaym")
+
+[node name="Crew2Portrait" type="TextureRect" parent="CrewList/CrewTwo" unique_id=906843110]
+custom_minimum_size = Vector2(42, 42)
+layout_mode = 2
+texture = ExtResource("4_5n7w8")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Crew2Detail" type="VBoxContainer" parent="CrewList/CrewTwo" unique_id=1948168306]
+layout_mode = 2
+
+[node name="C2Name" type="Label" parent="CrewList/CrewTwo/Crew2Detail" unique_id=1747990175]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_5n7w8")
+theme_override_font_sizes/font_size = 12
+text = "Randy Bresnik"
+
+[node name="C2Stat" type="HBoxContainer" parent="CrewList/CrewTwo/Crew2Detail" unique_id=1325976050]
+layout_mode = 2
+
+[node name="C2Task" type="Label" parent="CrewList/CrewTwo/Crew2Detail/C2Stat" unique_id=104895112]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_jll65")
+theme_override_font_sizes/font_size = 16
+text = "Task"
+
+[node name="C2AssignedTask" type="OptionButton" parent="CrewList/CrewTwo/Crew2Detail/C2Stat" unique_id=2115192788]
+custom_minimum_size = Vector2(10, 0)
+custom_maximum_size = Vector2(60, -1)
+layout_mode = 2
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_disabled_color = Color(1, 1, 1, 0.4)
+theme_override_fonts/font = ExtResource("3_jll65")
+theme_override_font_sizes/font_size = 16
+clip_text = true
+
+[node name="C2Stat2" type="HBoxContainer" parent="CrewList/CrewTwo/Crew2Detail" unique_id=1683974711]
+layout_mode = 2
+
+[node name="C2Health" type="Label" parent="CrewList/CrewTwo/Crew2Detail/C2Stat2" unique_id=912904763]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_jll65")
+theme_override_font_sizes/font_size = 16
+text = "Status"
+
+[node name="C2HealthStat" type="Label" parent="CrewList/CrewTwo/Crew2Detail/C2Stat2" unique_id=505123592]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.7970201, 0.13355443, 1)
+theme_override_fonts/font = ExtResource("3_jll65")
+theme_override_font_sizes/font_size = 16
+text = "Healthy"
+
+[node name="CrewThree" type="HBoxContainer" parent="CrewList" unique_id=358957825]
+layout_mode = 2
+script = ExtResource("7_uiswa")
+
+[node name="Crew3Portrait" type="TextureRect" parent="CrewList/CrewThree" unique_id=419091608]
+custom_minimum_size = Vector2(42, 42)
+layout_mode = 2
+texture = ExtResource("5_3jfhg")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Crew3Detail" type="VBoxContainer" parent="CrewList/CrewThree" unique_id=1811043013]
+layout_mode = 2
+
+[node name="C3Name" type="Label" parent="CrewList/CrewThree/Crew3Detail" unique_id=737233314]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_5n7w8")
+theme_override_font_sizes/font_size = 12
+text = "Frank Rubio"
+
+[node name="C3Stat" type="HBoxContainer" parent="CrewList/CrewThree/Crew3Detail" unique_id=1091459635]
+layout_mode = 2
+
+[node name="C3Task" type="Label" parent="CrewList/CrewThree/Crew3Detail/C3Stat" unique_id=1432507616]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_jll65")
+theme_override_font_sizes/font_size = 16
+text = "Task"
+
+[node name="C3AssignedTask" type="OptionButton" parent="CrewList/CrewThree/Crew3Detail/C3Stat" unique_id=392133125]
+custom_minimum_size = Vector2(10, 0)
+custom_maximum_size = Vector2(60, -1)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_jll65")
+theme_override_font_sizes/font_size = 16
+clip_text = true
+
+[node name="C3Stat2" type="HBoxContainer" parent="CrewList/CrewThree/Crew3Detail" unique_id=432543382]
+layout_mode = 2
+
+[node name="C3Health" type="Label" parent="CrewList/CrewThree/Crew3Detail/C3Stat2" unique_id=1077494604]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_jll65")
+theme_override_font_sizes/font_size = 16
+text = "Status"
+
+[node name="C3HealthStat" type="Label" parent="CrewList/CrewThree/Crew3Detail/C3Stat2" unique_id=1514375100]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.7970201, 0.13355443, 1)
+theme_override_fonts/font = ExtResource("3_jll65")
+theme_override_font_sizes/font_size = 16
+text = "Healthy"
+
+[node name="CrewFour" type="HBoxContainer" parent="CrewList" unique_id=1981389947]
+layout_mode = 2
+script = ExtResource("9_81451")
+
+[node name="Crew4Portrait" type="TextureRect" parent="CrewList/CrewFour" unique_id=964211858]
+custom_minimum_size = Vector2(42, 42)
+layout_mode = 2
+texture = ExtResource("6_mtfud")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Crew4Detail" type="VBoxContainer" parent="CrewList/CrewFour" unique_id=1585294206]
+layout_mode = 2
+
+[node name="C4Name" type="Label" parent="CrewList/CrewFour/Crew4Detail" unique_id=1796309074]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_5n7w8")
+theme_override_font_sizes/font_size = 12
+text = "Luca Permitano"
+
+[node name="C4Stat" type="HBoxContainer" parent="CrewList/CrewFour/Crew4Detail" unique_id=1154318675]
+layout_mode = 2
+
+[node name="C4Task" type="Label" parent="CrewList/CrewFour/Crew4Detail/C4Stat" unique_id=130896094]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_jll65")
+theme_override_font_sizes/font_size = 16
+text = "Task"
+
+[node name="C4AssignedTask" type="OptionButton" parent="CrewList/CrewFour/Crew4Detail/C4Stat" unique_id=526786844]
+custom_minimum_size = Vector2(10, 0)
+custom_maximum_size = Vector2(60, -1)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_jll65")
+theme_override_font_sizes/font_size = 16
+clip_text = true
+
+[node name="C4Stat2" type="HBoxContainer" parent="CrewList/CrewFour/Crew4Detail" unique_id=302369770]
+layout_mode = 2
+
+[node name="C4Health" type="Label" parent="CrewList/CrewFour/Crew4Detail/C4Stat2" unique_id=237005292]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_jll65")
+theme_override_font_sizes/font_size = 16
+text = "Status"
+
+[node name="C4HealthStat" type="Label" parent="CrewList/CrewFour/Crew4Detail/C4Stat2" unique_id=1536924555]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.7970201, 0.13355443, 1)
+theme_override_fonts/font = ExtResource("3_jll65")
+theme_override_font_sizes/font_size = 16
+text = "Healthy"

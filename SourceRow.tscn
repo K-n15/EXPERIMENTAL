@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://dvlpx12pmql00"]
+
+[ext_resource type="Script" uid="uid://d3456gw418x21" path="res://SourceRow.gd" id="1_sejcl"]
+[ext_resource type="FontFile" uid="uid://ypn8utfsg65m" path="res://Fonts/kenney_kenney-fonts/Fonts/Kenney Pixel Square.ttf" id="2_doa6n"]
+
+[node name="SourceRow" type="VBoxContainer" unique_id=856899486]
+offset_right = 641.0
+offset_bottom = 356.0
+script = ExtResource("1_sejcl")
+
+[node name="Name" type="Label" parent="." unique_id=491256296]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_doa6n")
+theme_override_font_sizes/font_size = 12
+text = "Solar Panel"
+
+[node name="Status" type="Label" parent="." unique_id=299475264]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_doa6n")
+theme_override_font_sizes/font_size = 12
+text = "Online · 30 kW"
+
+[node name="Condition" type="Label" parent="." unique_id=1033238022]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_doa6n")
+theme_override_font_sizes/font_size = 12
+text = "Functional"

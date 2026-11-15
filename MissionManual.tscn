@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://bq8mdgv4c6l6e"]
+
+[ext_resource type="FontFile" uid="uid://b4g15r47o7a06" path="res://Fonts/kenney_kenney-fonts/Fonts/Kenney Future Narrow.ttf" id="1_wtusa"]
+[ext_resource type="FontFile" uid="uid://b338r05npuudd" path="res://Fonts/kenney_kenney-fonts/Fonts/Kenney Future.ttf" id="2_bk352"]
+
+[node name="MissionManual" type="PanelContainer" unique_id=930718681]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=496155760]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=1227056614]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer" unique_id=2052906843]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_wtusa")
+theme_override_font_sizes/font_size = 14
+text = "Mission Logs"
+
+[node name="SpacerLeft" type="MarginContainer" parent="VBoxContainer/HBoxContainer" unique_id=1637978672]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+
+[node name="SpacerRight" type="MarginContainer" parent="VBoxContainer/HBoxContainer" unique_id=495114898]
+layout_mode = 2
+theme_override_constants/margin_right = 5
+
+[node name="EndDay" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=909592156]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_bk352")
+theme_override_font_sizes/font_size = 12
+text = "END DAY"
+alignment = 2
+icon_alignment = 2

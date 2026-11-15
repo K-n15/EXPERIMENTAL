@@ -1,0 +1,115 @@
+[gd_scene format=3 uid="uid://d28iemliufv52"]
+
+[ext_resource type="Script" uid="uid://cfihvxvrgi045" path="res://PowerDetail.gd" id="1_dqkdb"]
+[ext_resource type="PackedScene" uid="uid://dvlpx12pmql00" path="res://SourceRow.tscn" id="1_yx7gt"]
+[ext_resource type="FontFile" uid="uid://cpgxkgwj4nh7t" path="res://Fonts/kenney_kenney-fonts/Fonts/Kenney Mini Square.ttf" id="3_uyiwq"]
+[ext_resource type="FontFile" uid="uid://ccwqv2cdwrev7" path="res://Fonts/kenney_kenney-fonts/Fonts/Kenney Mini.ttf" id="4_pvj6d"]
+[ext_resource type="FontFile" uid="uid://ypn8utfsg65m" path="res://Fonts/kenney_kenney-fonts/Fonts/Kenney Pixel Square.ttf" id="5_1slcu"]
+[ext_resource type="FontFile" uid="uid://c6fq8r7b2jwsr" path="res://Fonts/kenney_kenney-fonts/Fonts/Kenney Pixel.ttf" id="6_s64en"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_uovyt"]
+line_spacing = 1.0
+font = ExtResource("3_uyiwq")
+font_size = 12
+
+[node name="PowerDetail" type="HBoxContainer" unique_id=1795260222]
+offset_right = 640.0
+offset_bottom = 361.0
+theme_override_constants/separation = 16
+script = ExtResource("1_dqkdb")
+
+[node name="Sources" type="VBoxContainer" parent="." unique_id=2028227278]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+
+[node name="SolarRow" parent="Sources" unique_id=856899486 instance=ExtResource("1_yx7gt")]
+layout_mode = 2
+
+[node name="HSeparator" type="HSeparator" parent="Sources" unique_id=1221618051]
+layout_mode = 2
+
+[node name="ReactorRow" parent="Sources" unique_id=1550595119 instance=ExtResource("1_yx7gt")]
+layout_mode = 2
+
+[node name="HSeparator2" type="HSeparator" parent="Sources" unique_id=1725903619]
+layout_mode = 2
+
+[node name="StorageRow" parent="Sources" unique_id=1209024574 instance=ExtResource("1_yx7gt")]
+layout_mode = 2
+
+[node name="SumDisplay" type="VBoxContainer" parent="." unique_id=1340202355]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="Power" type="Label" parent="SumDisplay" unique_id=956061896]
+layout_mode = 2
+text = "Current 
+Power"
+label_settings = SubResource("LabelSettings_uovyt")
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="SumDisplay" unique_id=1639400785]
+layout_mode = 2
+size_flags_vertical = 3
+alignment = 1
+
+[node name="Generated" type="ProgressBar" parent="SumDisplay/HBoxContainer" unique_id=1115595152]
+unique_name_in_owner = true
+modulate = Color(9.818673e-06, 0.9421748, 0.117537476, 1)
+propagate_maximum_size = true
+layout_mode = 2
+size_flags_vertical = 1
+offset_transform_enabled = true
+theme_override_fonts/font = ExtResource("4_pvj6d")
+theme_override_font_sizes/font_size = 12
+value = 50.0
+fill_mode = 3
+show_percentage = false
+
+[node name="SpacerCenter" type="MarginContainer" parent="SumDisplay/HBoxContainer" unique_id=1397039225]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_right = 10
+
+[node name="Consumed" type="ProgressBar" parent="SumDisplay/HBoxContainer" unique_id=961714874]
+unique_name_in_owner = true
+self_modulate = Color(0.98270243, 0.4897244, 7.70092e-07, 1)
+layout_mode = 2
+size_flags_vertical = 1
+offset_transform_enabled = true
+theme_override_fonts/font = ExtResource("4_pvj6d")
+theme_override_font_sizes/font_size = 12
+value = 50.0
+fill_mode = 3
+show_percentage = false
+
+[node name="BarLabel" type="Label" parent="SumDisplay" unique_id=606488665]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_1slcu")
+theme_override_font_sizes/font_size = 12
+text = "G        C"
+horizontal_alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="SumDisplay" unique_id=1910619455]
+layout_mode = 2
+alignment = 1
+
+[node name="GeneratedAmt" type="Label" parent="SumDisplay/HBoxContainer2" unique_id=1661568022]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_fonts/font = ExtResource("6_s64en")
+text = "26 KW"
+
+[node name="SpacerCenter" type="MarginContainer" parent="SumDisplay/HBoxContainer2" unique_id=589755069]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_right = 5
+
+[node name="ConsumedAmt" type="Label" parent="SumDisplay/HBoxContainer2" unique_id=693872614]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_fonts/font = ExtResource("6_s64en")
+text = "26 KW"
